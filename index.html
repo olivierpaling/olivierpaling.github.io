@@ -128,9 +128,9 @@
 							<br>
 							<br><b>Extra (optioneel)</b>
 							<br>
-							<input type="checkbox" id="guestbranding">Eigen Huisstijl<br>
-							<input type="checkbox" id="conversationstarter">Conversatiestarter<br>
-							<input type="checkbox" id="mailsubmission">Veilig mailen vanuit bronsystemen<br>
+							<input type="checkbox" id="guestbranding"> Eigen Huisstijl<br>
+							<input type="checkbox" id="conversationstarter"> Conversatiestarter<br>
+							<input type="checkbox" id="mailsubmission"> Veilig mailen vanuit bronsystemen<br>
 						</p>
 					</div>
 				</div>
@@ -360,7 +360,6 @@
 
 	      var planElement = document.querySelector("[data-cb-plan-id='ultimate']");
 	      var product = cbInstance.getProduct(planElement);
-	      product.addons.push({id: "mailsubmission", quantity: 2});
 	      product.addCoupon("startup");
 	      var cart = cbInstance.getCart();
 	      cart.setCustomer({email: "olivier.paling@zivver.com"});
