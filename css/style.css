@@ -7,7 +7,7 @@
 }
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *
 * ======================================================= */
 body {
@@ -1391,5 +1391,14 @@ form label {
 .js .animate-box {
   opacity: 0;
 }
+
+input[type=checkbox] + label {
+  color: #ccc;
+  font-style: italic;
+}
+input[type=checkbox]:checked + label {
+  color: #f00;
+  font-style: normal;
+} 
 
 /*# sourceMappingURL=style.css.map */
