@@ -55,7 +55,27 @@
 <script src="https://js.chargebee.com/v2/chargebee.js" data-cb-site="zivver-test" ></script>
 	</head>
 	<body>
+		<div class="gtco-loader"></div>
 
+		<div id="page">
+		<nav class="gtco-nav" role="navigation">
+			<div class="gtco-container">
+				<div class="row">
+					<div class="col-xs-2">
+						<div id="gtco-logo"><a href="index.html">ZIVVER Shop</a></div>
+					</div>
+					<div class="col-xs-8 text-center menu-1">
+
+					</div>
+					<div class="col-xs-2 text-right hidden-xs menu-2">
+						<ul>
+							<li class="btn-cta"><a href="javascript:void(0)" data-cb-type="checkout" data-cb-plan-id="start" ><span>Login</span></a></li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</nav>
 
 
 	<div id="gtco-features">
@@ -142,8 +162,8 @@
 							  <input type="checkbox" id=mailsubmission>
 							  <span class="checkmark"></span>
 							</label><br>
-							
-						
+
+
 						</p>
 					</div>
 				</div>
@@ -275,7 +295,7 @@
 	</script>
 
 	<script>
-		  var prof_price = 120;	
+		  var prof_price = 120;
 		  var prof_base = 0;
 		  var prof_account_count = 1;
 		  var prof_account_price = 12.99;
@@ -283,24 +303,24 @@
 		  var prof_addon_conv = 29;
 		  var prof_addon_mail = 100;
 		  var prof_coupon = 1.0;
-		  
+
 		function update_price () {
 			document.getElementById("profprice").innerHTML = Math.round(prof_price * prof_coupon * 100) / 100;
 		}
-	
+
 	    document.addEventListener("DOMContentLoaded", function() {
 
 		  prof_price = prof_base + (prof_account_count * prof_account_price);
 		  update_price();
-		
+
 	      var cbInstance = Chargebee.getInstance();
 
 	      var planElement = document.querySelector("[data-cb-plan-id='professional']");
 	      var product = cbInstance.getProduct(planElement);
-		 
+
 		  product.setPlanQuantity(prof_account_count);
 	      //product.addCoupon("startup");
-		  
+
 	      var cart = cbInstance.getCart();
 	      //cart.setCustomer({email: "olivier.paling@zivver.com"});
 				console.log(document.getElementById("ms"));
@@ -336,17 +356,17 @@
 	            }
 	        }
 	      });
-		  
+
 				document.getElementById('prof_accounts').addEventListener('change', function (event) {
 					// Log the clicked element in the console
-					
+
 					prof_price -= prof_account_count * prof_account_price
 					prof_account_count = document.getElementById("prof_accounts").value
 					prof_price += prof_account_count * prof_account_price;
 					update_price();
 					product.setPlanQuantity(prof_account_count);
 				}, false);
-		  
+
 				document.getElementById('mailsubmission').addEventListener('click', function (event) {
 
 
@@ -362,7 +382,7 @@
 						product.removeAddon("mailsubmission");
 						prof_price -= prof_addon_mail;
 					}
-					
+
 					update_price();
 
 				}, false);
