@@ -102,7 +102,9 @@
 						</span>
 						<h2>Professional</h2>
 						<h4>Gebruikers mailen veilig én makkelijk </h4>
+						<p><div style="font-size: 23pt;">&euro;<span id="profprice">120,-</span></div> <span style="font-size: 16pt;">per maand</span></p>
 						<p><a href="javascript:void(0)" data-cb-type="checkout" data-cb-plan-id="professional" class="btn btn-primary">Kopen</a></p>
+						<p>accounts: <input type="number" id="prof_accounts" name="prof_accounts" min="1" max="1000" value="1">	   </p>
 							<h5>Alle features van het Startpakket, plus:</h5>
 							<p>
 							<b>Functies</b>
@@ -128,9 +130,20 @@
 							<br>
 							<br><b>Extra (optioneel)</b>
 							<br>
-							<input type="checkbox" id="guestbranding"> Eigen Huisstijl<br>
-							<input type="checkbox" id="conversationstarter"> Conversatiestarter<br>
-							<input type="checkbox" id="mailsubmission"> Veilig mailen vanuit bronsystemen<br>
+							<label class="container">Eigen Huisstijl <span style="font-weight:normal;">&euro;50,00</span>
+							  <input type="checkbox" id=guestbranding>
+							  <span class="checkmark"></span>
+							</label><br>
+							<label class="container">Conversatiestarter <span style="font-weight:normal;">&euro;29,00</span>
+							  <input type="checkbox" id=conversationstarter>
+							  <span class="checkmark"></span>
+							</label><br>
+							<label class="container">Veilig mailen vanuit bronsystemen <span style="font-weight:normal;">&euro;100,00</span>
+							  <input type="checkbox" id=mailsubmission>
+							  <span class="checkmark"></span>
+							</label><br>
+							
+						
 						</p>
 					</div>
 				</div>
@@ -229,7 +242,7 @@
 
 	      var planElement = document.querySelector("[data-cb-plan-id='start']");
 	      var product = cbInstance.getProduct(planElement);
-	      product.addCoupon("startup");
+	      //product.addCoupon("startup");
 	      var cart = cbInstance.getCart();
 	      cart.setCustomer({email: "olivier.paling@zivver.com"});
 
@@ -262,13 +275,32 @@
 	</script>
 
 	<script>
+		  var prof_price = 120;	
+		  var prof_base = 0;
+		  var prof_account_count = 1;
+		  var prof_account_price = 12.99;
+		  var prof_addon_style = 50;
+		  var prof_addon_conv = 29;
+		  var prof_addon_mail = 100;
+		  var prof_coupon = 1.0;
+		  
+		function update_price () {
+			document.getElementById("profprice").innerHTML = Math.round(prof_price * prof_coupon * 100) / 100;
+		}
+	
 	    document.addEventListener("DOMContentLoaded", function() {
+
+		  prof_price = prof_base + (prof_account_count * prof_account_price);
+		  update_price();
+		
 	      var cbInstance = Chargebee.getInstance();
 
 	      var planElement = document.querySelector("[data-cb-plan-id='professional']");
 	      var product = cbInstance.getProduct(planElement);
-
-	      product.addCoupon("startup");
+		 
+		  product.setPlanQuantity(prof_account_count);
+	      //product.addCoupon("startup");
+		  
 	      var cart = cbInstance.getCart();
 	      cart.setCustomer({email: "olivier.paling@zivver.com"});
 				console.log(document.getElementById("ms"));
@@ -304,6 +336,17 @@
 	            }
 	        }
 	      });
+		  
+				document.getElementById('prof_accounts').addEventListener('change', function (event) {
+					// Log the clicked element in the console
+					
+					prof_price -= prof_account_count * prof_account_price
+					prof_account_count = document.getElementById("prof_accounts").value
+					prof_price += prof_account_count * prof_account_price;
+					update_price();
+					product.setPlanQuantity(prof_account_count);
+				}, false);
+		  
 				document.getElementById('mailsubmission').addEventListener('click', function (event) {
 
 
@@ -311,13 +354,16 @@
 					console.log(event.target);
 					console.log(product)
 					if(document.getElementById("mailsubmission").checked){
+						prof_price += prof_addon_mail;
 						product.addAddon({id: "mailsubmission", quantity: 1});
 					}
 
 					if(!document.getElementById("mailsubmission").checked){
 						product.removeAddon("mailsubmission");
+						prof_price -= prof_addon_mail;
 					}
-
+					
+					update_price();
 
 				}, false);
 				document.getElementById('guestbranding').addEventListener('click', function (event) {
@@ -327,14 +373,16 @@
 					console.log(event.target);
 
 					if(document.getElementById("guestbranding").checked){
+						prof_price += prof_addon_style;
 						product.addAddon({id: "guestbranding", quantity: 1});
 					}
 
 					if(!document.getElementById("guestbranding").checked){
 						product.removeAddon("guestbranding");
+						prof_price -= prof_addon_style;
 					}
 
-
+					update_price();
 				}, false);
 				document.getElementById('conversationstarter').addEventListener('click', function (event) {
 
@@ -343,14 +391,16 @@
 					console.log(event.target);
 
 					if(document.getElementById("conversationstarter").checked){
+						prof_price += prof_addon_conv;
 						product.addAddon({id: "conversationstarter", quantity: 1});
 					}
 
 					if(!document.getElementById("conversationstarter").checked){
+						prof_price -= prof_addon_conv;
 						product.removeAddon("conversationstarter");
 					}
 
-
+					update_price();
 				}, false);
 	    });
 	</script>
@@ -360,7 +410,7 @@
 
 	      var planElement = document.querySelector("[data-cb-plan-id='ultimate']");
 	      var product = cbInstance.getProduct(planElement);
-	      product.addCoupon("startup");
+	      // product.addCoupon("startup");
 	      var cart = cbInstance.getCart();
 	      cart.setCustomer({email: "olivier.paling@zivver.com"});
 
