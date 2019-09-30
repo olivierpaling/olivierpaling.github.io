@@ -76,7 +76,7 @@
 					</div>
 					<div class="col-xs-2 text-right hidden-xs menu-2">
 						<ul>
-							<li class="btn-cta"><a href="javascript:void(0)" data-cb-type="portal" ><span>Login</span></a></li>
+							<!-- <li class="btn-cta"><a href="javascript:void(0)" data-cb-type="portal" ><span>Login</span></a></li> -->
 						</ul>
 					</div>
 				</div>
@@ -84,20 +84,36 @@
 			</div>
 		</nav>
 
-
 	<div id="gtco-features">
 		<div class="gtco-container">
+			<div class="row">
+				<div class="slidecontainer">
+						<input type="range" min="1" max="50" value="1" class="slider" id="accounts_counter">
+					</div>
+				<div class="slidecontainer"><span id=account_show>1</span> Accounts </div>
+
+				</div>
+
 			<div class="row">
 				<div class="col-md-4 col-sm-4">
 					<div class="feature-center animate-box" data-animate-effect="fadeIn">
 						<span class="icon">
 							<i class="icon-eye"></i>
 						</span>
-						<h2>Start</h2>
+						<h2>Basic</h2>
 						<h4>De basis voor veilig mailen</h4>
-						<p><a href="javascript:void(0)" data-cb-type="checkout" data-cb-plan-id="start" class="btn btn-primary">Kopen</a></p>
+						<p><div style="font-size: 23pt;">&euro;<span id="basicprice">120,-</span></div> <span style="font-size: 16pt;">per maand</span></p>
+						<p><a href="javascript:void(0)" data-cb-type="checkout" data-cb-plan-id="zivver-basic-v1" class="btn btn-primary">Kopen</a></p>
 							<h5>Voorkom datalekken met deze features:</h5>
 							<p>
+
+									<br><b>Extra (optioneel)</b>
+									<br>
+									<label class="container">Free SMS with fair use <span style="font-weight:normal;"></span>
+									  <input type="checkbox" id=basic_free_sms>
+									  <span class="checkmark"></span>
+									</label><br>
+									
 							<b>Functies</b>
 							<br>
 							<br>Veilig e-mails versturen
@@ -130,10 +146,36 @@
 						<h2>Professional</h2>
 						<h4>Gebruikers mailen veilig én makkelijk </h4>
 						<p><div style="font-size: 23pt;">&euro;<span id="profprice">120,-</span></div> <span style="font-size: 16pt;">per maand</span></p>
-						<p><a href="javascript:void(0)" data-cb-type="checkout" data-cb-plan-id="professional" class="btn btn-primary">Kopen</a></p>
-						<p>accounts: <input type="number" id="prof_accounts" name="prof_accounts" min="1" max="1000" value="1">	   </p>
+						<p><a href="javascript:void(0)" data-cb-type="checkout" data-cb-plan-id="zivver-pro-v1" class="btn btn-primary">Kopen</a></p>
+						<!-- <p>accounts: <input type="number" id="prof_accounts" name="prof_accounts" min="1" max="1000" value="1">	   </p> -->
 							<h5>Alle features van het Startpakket, plus:</h5>
 							<p>
+
+									<br><b>Extra (optioneel)</b>
+									<br>
+									<label class="container">Free SMS with fair use <span style="font-weight:normal;"></span>
+									  <input type="checkbox" id=prof_free_sms>
+									  <span class="checkmark"></span>
+									</label><br>
+									<label class="container">Domain Claims <span style="font-weight:normal;"></span>
+									  <input type="checkbox" id=prof_domain_claim>
+									  <span class="checkmark"></span>
+									</label><br>
+									<label class="container">Conversation starters <span style="font-weight:normal;"></span>
+									  <input type="checkbox" id=prof_conversation_starter>
+									  <span class="checkmark"></span>
+									</label><br>
+		
+									<label class="container">Guest Branding <span style="font-weight:normal;"></span>
+										<input type="checkbox" id=prof_guest_branding>
+										<span class="checkmark"></span>
+									  </label><br>
+		
+									  <label class="container">Implementation support <span style="font-weight:normal;"></span>
+										<input type="checkbox" id=prof_implementation_support>
+										<span class="checkmark"></span>
+									  </label><br>
+
 							<b>Functies</b>
 							<br>
 							<br>Veilig e-mails versturen
@@ -155,20 +197,7 @@
 							<br>Self-service support
 							<br>Online documentatie en video's
 							<br>
-							<br><b>Extra (optioneel)</b>
-							<br>
-							<label class="container">Eigen Huisstijl <span style="font-weight:normal;">&euro;50,00</span>
-							  <input type="checkbox" id=guestbranding>
-							  <span class="checkmark"></span>
-							</label><br>
-							<label class="container">Conversatiestarter <span style="font-weight:normal;">&euro;29,00</span>
-							  <input type="checkbox" id=conversationstarter>
-							  <span class="checkmark"></span>
-							</label><br>
-							<label class="container">Veilig mailen vanuit bronsystemen <span style="font-weight:normal;">&euro;100,00</span>
-							  <input type="checkbox" id=mailsubmission>
-							  <span class="checkmark"></span>
-							</label><br>
+
 
 
 						</p>
@@ -181,9 +210,45 @@
 						</span>
 						<h2>Ultimate</h2>
 						<h4>Complete contrle voor organisaties</h4>
-						<p><a href="javascript:void(0)" data-cb-type="checkout" data-cb-plan-id="ultimate" class="btn btn-primary">Kopen</a></p>
+						<p><div style="font-size: 23pt;">&euro;<span id="ultimateprice">120,-</span></div> <span style="font-size: 16pt;">per maand</span></p>
+						<p><a href="javascript:void(0)" data-cb-type="checkout" data-cb-plan-id="zivver-ultimate-v1" class="btn btn-primary">Kopen</a></p>
 							<h5>Alle features van het professional pakket, plus:</h5>
 							<p>
+
+									<br><b>Extra (optioneel)</b>
+									<br>
+
+
+									<label class="container">Free SMS with fair use <span style="font-weight:normal;"></span>
+									  <input type="checkbox" id=ult_free_sms>
+									  <span class="checkmark"></span>
+									</label><br>
+
+									<label class="container">Guest Branding <span style="font-weight:normal;"></span>
+										<input type="checkbox" id=ult_guest_branding>
+										<span class="checkmark"></span>
+									  </label><br>
+
+									  <label class="container">Organizational Units <span style="font-weight:normal;"></span>
+										<input type="checkbox" id=ult_org_units>
+										<span class="checkmark"></span>
+									  </label><br>
+
+									  <label class="container">Inbound Secure Direct Delivery <span style="font-weight:normal;"></span>
+										<input type="checkbox" id=ult_direct_delivery>
+										<span class="checkmark"></span>
+									  </label><br>
+
+									  <label class="container">Mail submission<span style="font-weight:normal;"></span>
+										<input type="checkbox" id=ult_mail_submission>
+										<span class="checkmark"></span>
+									  </label><br>
+		
+									  <label class="container">Implementation support <span style="font-weight:normal;"></span>
+										<input type="checkbox" id=ult_implementation_support>
+										<span class="checkmark"></span>
+									  </label><br>
+
 							<b>Functies</b>
 							<br>
 							<br>Veilig e-mails versturen
@@ -264,12 +329,89 @@
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+	<script>
+		var index_basic = 0;
+		var index_pro = 1;
+		var index_ultimate = 2;
+		var index_custom_branding = 3;
+		var index_conversation_starter = 4;
+		var index_mail_submission = 5;
+		var index_sms = 6;
+		var index_support = 7;
+		var index_domain_claims = 8;
+		var index_direct_delivery = 9;
+		var index_org_units = 10;
+		var index_implementation = 12;
 
+		var name_custom_branding = "ZIVVER-custom-branding-of-guest-portal-v1";
+		var name_conversation_starter = "zivver-conversation-starters-v1";
+		var name_mail_submission = "zivver-send-mails-from-source-systems-v1";
+		var name_sms = "zivver-include-sms-cost-based-on-fair-use-v1";
+		var name_support = "zivver-enterprise-sla-on-top-of-general-support-v1";
+		var name_domain_claims = "zivver-domain-claims-v1";
+		var name_direct_delivery = "zivver-inbound-secure-direct-delivery-v1";
+		var name_org_units = "organizational-units";
+		var name_implementation = "zivver-implementation-support-v1";
+
+		var price_data = 
+			[[  9.00,  12.50,  20.00, 10.00,   5.00,  10.00,   1.00,  99.00,   0.50,   0.50,   1.00,   0.50,  1500.00],
+			 [ 26.00,  35.50,  48.00, 10.00,   5.00,  10.00,   3.50,  99.00,   1.00,   1.00,   2.50,   1.00,  1500.00],
+			 [ 26.00,  35.50,  48.00, 10.00,   5.00,  10.00,   3.50,  99.00,   1.00,   1.00,   2.50,   1.00,  1500.00],
+			 [ 26.00,  35.50,  48.00, 10.00,   5.00,  10.00,   3.50,  99.00,   1.00,   1.00,   2.50,   1.00,  1500.00],
+			 [ 59.50,  82.00, 105.00, 10.00,   5.50,  16.00,   8.00,  99.00,   2.50,   2.50,   5.50,   2.50,  1500.00],
+			 [ 59.50,  82.00, 105.00, 10.00,   5.50,  16.00,   8.00,  99.00,   2.50,   2.50,   5.50,   2.50,  1500.00],
+			 [ 59.50,  82.00, 105.00, 10.00,   5.50,  16.00,   8.00,  99.00,   2.50,   2.50,   5.50,   2.50,  1500.00],
+			 [ 59.50,  82.00, 105.00, 10.00,   5.50,  16.00,   8.00,  99.00,   2.50,   2.50,   5.50,   2.50,  1500.00],
+			 [ 59.50,  82.00, 105.00, 10.00,   5.50,  16.00,   8.00,  99.00,   2.50,   2.50,   5.50,   2.50,  1500.00],
+			 [ 99.50, 138.00, 176.50, 10.00,   9.00,  27.00,  13.00,  99.00,   4.50,   4.50,   9.00,   4.50,  1500.00],
+			 [ 99.50, 138.00, 176.50, 10.00,   9.00,  27.00,  13.00,  99.00,   4.50,   4.50,   9.00,   4.50,  1500.00],
+			 [ 99.50, 138.00, 176.50, 10.00,   9.00,  27.00,  13.00,  99.00,   4.50,   4.50,   9.00,   4.50,  1500.00],
+			 [ 99.50, 138.00, 176.50, 10.00,   9.00,  27.00,  13.00,  99.00,   4.50,   4.50,   9.00,   4.50,  1500.00],
+			 [ 99.50, 138.00, 176.50, 10.00,   9.00,  27.00,  13.00,  99.00,   4.50,   4.50,   9.00,   4.50,  1500.00],
+			 [144.50, 200.00, 255.50, 13.00,  13.00,  39.50,  19.00,  99.00,   6.50,   6.50,  13.00,   6.50,  1500.00],
+			 [144.50, 200.00, 255.50, 13.00,  13.00,  39.50,  19.00,  99.00,   6.50,   6.50,  13.00,   6.50,  1500.00],
+			 [144.50, 200.00, 255.50, 13.00,  13.00,  39.50,  19.00,  99.00,   6.50,   6.50,  13.00,   6.50,  1500.00],
+			 [144.50, 200.00, 255.50, 13.00,  13.00,  39.50,  19.00,  99.00,   6.50,   6.50,  13.00,   6.50,  1500.00],
+			 [144.50, 200.00, 255.50, 13.00,  13.00,  39.50,  19.00,  99.00,   6.50,   6.50,  13.00,   6.50,  1500.00],
+			 [144.50, 200.00, 255.50, 13.00,  13.00,  39.50,  19.00,  99.00,   6.50,   6.50,  13.00,   6.50,  1500.00],
+			 [144.50, 200.00, 255.50, 13.00,  13.00,  39.50,  19.00,  99.00,   6.50,   6.50,  13.00,   6.50,  1500.00],
+			 [199.50, 276.50, 353.50, 18.00,  18.00,  54.50,  26.50,  99.00,   9.00,   9.00,  18.00,   9.00,  1500.00],
+			 [199.50, 276.50, 353.50, 18.00,  18.00,  54.50,  26.50,  99.00,   9.00,   9.00,  18.00,   9.00,  1500.00],
+			 [199.50, 276.50, 353.50, 18.00,  18.00,  54.50,  26.50,  99.00,   9.00,   9.00,  18.00,   9.00,  1500.00],
+			 [199.50, 276.50, 353.50, 18.00,  18.00,  54.50,  26.50,  99.00,   9.00,   9.00,  18.00,   9.00,  1500.00],
+			 [199.50, 276.50, 353.50, 18.00,  18.00,  54.50,  26.50,  99.00,   9.00,   9.00,  18.00,   9.00,  1500.00],
+			 [199.50, 276.50, 353.50, 18.00,  18.00,  54.50,  26.50,  99.00,   9.00,   9.00,  18.00,   9.00,  1500.00],
+			 [199.50, 276.50, 353.50, 18.00,  18.00,  54.50,  26.50,  99.00,   9.00,   9.00,  18.00,   9.00,  1500.00],
+			 [199.50, 276.50, 353.50, 18.00,  18.00,  54.50,  26.50,  99.00,   9.00,   9.00,  18.00,   9.00,  1500.00],
+			 [199.50, 276.50, 353.50, 18.00,  18.00,  54.50,  26.50,  99.00,   9.00,   9.00,  18.00,   9.00,  1500.00],
+			 [255.00, 353.00, 451.00, 23.00,  23.00,  69.50,  33.50,  99.00,  11.50,  11.50,  23.00,  11.50,  1500.00],
+			 [255.00, 353.00, 451.00, 23.00,  23.00,  69.50,  33.50,  99.00,  11.50,  11.50,  23.00,  11.50,  1500.00],
+			 [255.00, 353.00, 451.00, 23.00,  23.00,  69.50,  33.50,  99.00,  11.50,  11.50,  23.00,  11.50,  1500.00],
+			 [255.00, 353.00, 451.00, 23.00,  23.00,  69.50,  33.50,  99.00,  11.50,  11.50,  23.00,  11.50,  1500.00],
+			 [255.00, 353.00, 451.00, 23.00,  23.00,  69.50,  33.50,  99.00,  11.50,  11.50,  23.00,  11.50,  1500.00],
+			 [255.00, 353.00, 451.00, 23.00,  23.00,  69.50,  33.50,  99.00,  11.50,  11.50,  23.00,  11.50,  1500.00],
+			 [255.00, 353.00, 451.00, 23.00,  23.00,  69.50,  33.50,  99.00,  11.50,  11.50,  23.00,  11.50,  1500.00],
+			 [255.00, 353.00, 451.00, 23.00,  23.00,  69.50,  33.50,  99.00,  11.50,  11.50,  23.00,  11.50,  1500.00],
+			 [255.00, 353.00, 451.00, 23.00,  23.00,  69.50,  33.50,  99.00,  11.50,  11.50,  23.00,  11.50,  1500.00],
+			 [308.00, 426.50, 544.50, 27.50,  27.50,  83.50,  40.50,  99.00,  13.50,  13.50,  27.50,  13.50,  1500.00],
+			 [308.00, 426.50, 544.50, 27.50,  27.50,  83.50,  40.50,  99.00,  13.50,  13.50,  27.50,  13.50,  1500.00],
+			 [308.00, 426.50, 544.50, 27.50,  27.50,  83.50,  40.50,  99.00,  13.50,  13.50,  27.50,  13.50,  1500.00],
+			 [308.00, 426.50, 544.50, 27.50,  27.50,  83.50,  40.50,  99.00,  13.50,  13.50,  27.50,  13.50,  1500.00],
+			 [308.00, 426.50, 544.50, 27.50,  27.50,  83.50,  40.50,  99.00,  13.50,  13.50,  27.50,  13.50,  1500.00],
+			 [308.00, 426.50, 544.50, 27.50,  27.50,  83.50,  40.50,  99.00,  13.50,  13.50,  27.50,  13.50,  1500.00],
+			 [308.00, 426.50, 544.50, 27.50,  27.50,  83.50,  40.50,  99.00,  13.50,  13.50,  27.50,  13.50,  1500.00],
+			 [308.00, 426.50, 544.50, 27.50,  27.50,  83.50,  40.50,  99.00,  13.50,  13.50,  27.50,  13.50,  1500.00],
+			 [308.00, 426.50, 544.50, 27.50,  27.50,  83.50,  40.50,  99.00,  13.50,  13.50,  27.50,  13.50,  1500.00],
+			 [308.00, 426.50, 544.50, 27.50,  27.50,  83.50,  40.50,  99.00,  13.50,  13.50,  27.50,  13.50,  1500.00],
+			 [308.00, 426.50, 544.50, 27.50,  27.50,  83.50,  40.50,  99.00,  13.50,  13.50,  27.50,  13.50,  1500.00]];
+
+
+	</script>
 	<script>
 	    document.addEventListener("DOMContentLoaded", function() {
 	      var cbInstance = Chargebee.getInstance();
 
-	      var planElement = document.querySelector("[data-cb-plan-id='start']");
+	      var planElement = document.querySelector("[data-cb-plan-id='zivver-basic-v1']");
 	      var product = cbInstance.getProduct(planElement);
 	      //product.addCoupon("startup");
 	      var cart = cbInstance.getCart();
@@ -302,33 +444,155 @@
 	      });
 	    });
 	</script>
+	<script>
+/************************ BASIC ********************/
+
+			var basic_account_count = 1;
+			var basic_addon_free_sms = 0;
+			var basic_product = null;
+  
+		  function update_basic_price () {
+
+			  var index = basic_account_count - 1;
+			  var price = price_data[index][index_basic]
+						  + basic_addon_free_sms * price_data[index][index_sms]
+						  console.log("update_basic_price" + basic_account_count);
+  
+			  document.getElementById("basicprice").innerHTML = price.toFixed(2);
+		  }
+  
+		  function updatebasicProduct() {
+			basic_product.setPlanQuantity(basic_account_count);
+			basic_product.removeAddon(name_sms);
+			  if (basic_addon_free_sms > 0){
+				basic_product.addAddon({id: name_sms, quantity: basic_account_count});
+			  }
+		  }
+  
+		  document.addEventListener("DOMContentLoaded", function() {
+  
+  
+			var cbInstance = Chargebee.getInstance();
+			var planElement = document.querySelector("[data-cb-plan-id='zivver-basic-v1']");
+			basic_product = cbInstance.getProduct(planElement);
+  
+			update_basic_price();
+			updatebasicProduct()
+  
+			var cart = cbInstance.getCart();
+			//cart.setCustomer({email: "olivier.paling@zivver.com"});
+				  console.log(document.getElementById("ms"));
+				  console.log("loaded");
+			cbInstance.setCheckoutCallbacks(function(cart) {
+			  // You can get the plan name for which the checkout happened like below
+  
+			  var product = cart.products[0];
+					  console.log("products test");
+					  console.log(document.getElementById("ms"));
+					  if(document.getElementById("ms").checked){
+							  console.log("ms checked")
+					  }
+			  console.log(product.planId);
+			  console.log(product.addons);
+			  return {
+				  loaded: function() {
+					  console.log("checkout opened");
+				  },
+				  close: function() {
+					  console.log("checkout closed");
+				  },
+				  success: function(hostedPageId) {
+					console.log(hostedPageId);
+					// Hosted page id will be unique token for the checkout that happened
+					// You can pass this hosted page id to your backend
+					// and then call our retrieve hosted page api to get subscription details
+					// https://apidocs.chargebee.com/docs/api/hosted_pages#retrieve_a_hosted_page
+				  },
+				  step: function(value) {
+					  // value -> which step in checkout
+					  console.log(value);
+				  }
+			  }
+			});
+  
+			
+			document.getElementById('accounts_counter').addEventListener('input', function (event) {
+				basic_account_count = document.getElementById("accounts_counter").value
+			  document.getElementById("account_show").innerHTML = basic_account_count
+			  
+			  update_basic_price();
+				updatebasicProduct()
+  
+			}, false);
+  
+				  document.getElementById('basic_free_sms').addEventListener('click', function (event) {
+					  basic_addon_free_sms = document.getElementById("basic_free_sms").checked;
+					  update_basic_price();
+			updatebasicProduct()
+				  }, false);
+  
+		  });
+	  </script>
 
 	<script>
-		  var prof_price = 120;
-		  var prof_base = 0;
+/************************ PRO ********************/
+
+
 		  var prof_account_count = 1;
-		  var prof_account_price = 12.99;
-		  var prof_addon_style = 50;
-		  var prof_addon_conv = 29;
-		  var prof_addon_mail = 100;
-		  var prof_coupon = 1.0;
+		  var prof_addon_conv_starter = 0;
+		  var prof_addon_domain_claims = 0;
+		  var prof_addon_free_sms = 0;
+		  var prof_addon_guest_branding = 0;
+		  var prof_addon_implementation = 0;
+		  var product = null;
 
 		function update_price () {
-			document.getElementById("profprice").innerHTML = Math.round(prof_price * prof_coupon * 100) / 100;
+			var index = prof_account_count - 1;
+			var price = price_data[index][index_pro]
+						+ prof_addon_conv_starter * price_data[index][index_conversation_starter]
+						+ prof_addon_domain_claims * price_data[index][index_domain_claims]
+						+ prof_addon_free_sms * price_data[index][index_sms]
+						+ prof_addon_guest_branding * price_data[index][index_custom_branding]
+						+ prof_addon_implementation * price_data[index][index_implementation]
+
+			document.getElementById("profprice").innerHTML = price.toFixed(2);
+		}
+
+		function updateProfProduct() {
+			product.setPlanQuantity(prof_account_count);
+
+			product.removeAddon(name_conversation_starter);
+			product.removeAddon(name_domain_claims);
+			product.removeAddon(name_sms);
+			product.removeAddon(name_custom_branding);
+			product.removeAddon(name_implementation);
+
+			if (prof_addon_conv_starter > 0){
+				product.addAddon({id: name_conversation_starter, quantity: prof_account_count});
+			}
+			if (prof_addon_domain_claims > 0){
+				product.addAddon({id: name_domain_claims, quantity: prof_account_count});
+			}
+			if (prof_addon_free_sms > 0){
+				product.addAddon({id: name_sms, quantity: prof_account_count});
+			}
+			if (prof_addon_guest_branding > 0){
+				product.addAddon({id: name_custom_branding, quantity: prof_account_count});
+			}
+			if (prof_addon_implementation > 0){
+				product.addAddon({id: name_implementation, quantity: prof_account_count});
+			}
 		}
 
 	    document.addEventListener("DOMContentLoaded", function() {
 
-		  prof_price = prof_base + (prof_account_count * prof_account_price);
-		  update_price();
 
 	      var cbInstance = Chargebee.getInstance();
+	      var planElement = document.querySelector("[data-cb-plan-id='zivver-pro-v1']");
+	      product = cbInstance.getProduct(planElement);
 
-	      var planElement = document.querySelector("[data-cb-plan-id='professional']");
-	      var product = cbInstance.getProduct(planElement);
-
-		  product.setPlanQuantity(prof_account_count);
-	      //product.addCoupon("startup");
+		  update_price();
+		  updateProfProduct()
 
 	      var cart = cbInstance.getCart();
 	      //cart.setCustomer({email: "olivier.paling@zivver.com"});
@@ -366,78 +630,229 @@
 	        }
 	      });
 
-				document.getElementById('prof_accounts').addEventListener('change', function (event) {
-					// Log the clicked element in the console
-
-					prof_price -= prof_account_count * prof_account_price
-					prof_account_count = document.getElementById("prof_accounts").value
-					prof_price += prof_account_count * prof_account_price;
+		  
+		  document.getElementById('accounts_counter').addEventListener('input', function (event) {
+			prof_account_count = document.getElementById("accounts_counter").value
+			document.getElementById("account_show").innerHTML = prof_account_count
+			
 					update_price();
-					product.setPlanQuantity(prof_account_count);
+					updateProfProduct();
+		  }, false);
+
+				document.getElementById('prof_free_sms').addEventListener('click', function (event) {
+					prof_addon_free_sms = document.getElementById("prof_free_sms").checked;
+					update_price();
+					updateProfProduct();
 				}, false);
 
-				document.getElementById('mailsubmission').addEventListener('click', function (event) {
-
-
-					// Log the clicked element in the console
-					console.log(event.target);
-					console.log(product)
-					if(document.getElementById("mailsubmission").checked){
-						prof_price += prof_addon_mail;
-						product.addAddon({id: "mailsubmission", quantity: 1});
-					}
-
-					if(!document.getElementById("mailsubmission").checked){
-						product.removeAddon("mailsubmission");
-						prof_price -= prof_addon_mail;
-					}
-
+				document.getElementById('prof_domain_claim').addEventListener('click', function (event) {
+					prof_addon_domain_claims = document.getElementById("prof_domain_claim").checked;
 					update_price();
-
+					updateProfProduct();
 				}, false);
-				document.getElementById('guestbranding').addEventListener('click', function (event) {
 
-
-					// Log the clicked element in the console
-					console.log(event.target);
-
-					if(document.getElementById("guestbranding").checked){
-						prof_price += prof_addon_style;
-						product.addAddon({id: "guestbranding", quantity: 1});
-					}
-
-					if(!document.getElementById("guestbranding").checked){
-						product.removeAddon("guestbranding");
-						prof_price -= prof_addon_style;
-					}
-
+				document.getElementById('prof_conversation_starter').addEventListener('click', function (event) {
+					prof_addon_conv_starter = document.getElementById("prof_conversation_starter").checked;
 					update_price();
+					updateProfProduct();
 				}, false);
-				document.getElementById('conversationstarter').addEventListener('click', function (event) {
 
-
-					// Log the clicked element in the console
-					console.log(event.target);
-
-					if(document.getElementById("conversationstarter").checked){
-						prof_price += prof_addon_conv;
-						product.addAddon({id: "conversationstarter", quantity: 1});
-					}
-
-					if(!document.getElementById("conversationstarter").checked){
-						prof_price -= prof_addon_conv;
-						product.removeAddon("conversationstarter");
-					}
-
+				document.getElementById('prof_guest_branding').addEventListener('click', function (event) {
+					prof_addon_guest_branding = document.getElementById("prof_guest_branding").checked;
 					update_price();
+					updateProfProduct();
 				}, false);
+
+				document.getElementById('prof_implementation_support').addEventListener('click', function (event) {
+					prof_addon_implementation = document.getElementById("prof_implementation_support").checked;
+					update_price();
+					updateProfProduct();
+				}, false);				
+
 	    });
 	</script>
 	<script>
+			/************************ Ultimate ********************/
+			
+			
+					  var ult_account_count = 1;
+					  var ult_addon_direct_delivery = 0;
+					  var ult_addon_org_units = 0;
+					  var ult_addon_free_sms = 0;
+					  var ult_addon_guest_branding = 0;
+					  var ult_addon_mail_submission = 0;
+					  var ult_addon_implementation = 0;
+
+					  var ult_product = null;
+			
+					function ult_update_price () {
+						var index = ult_account_count - 1;
+						var price = price_data[index][index_ultimate]
+									+ ult_addon_direct_delivery * price_data[index][index_direct_delivery]
+									+ ult_addon_mail_submission * price_data[index][index_mail_submission]
+									+ ult_addon_org_units * price_data[index][index_org_units]
+									+ ult_addon_free_sms * price_data[index][index_sms]
+									+ ult_addon_guest_branding * price_data[index][index_custom_branding]
+									+ ult_addon_implementation * price_data[index][index_implementation]
+			console.log("sdfsdf" + price)
+						document.getElementById("ultimateprice").innerHTML = price.toFixed(2);
+					}
+			
+					function ult_updateProfProduct() {
+						ult_product.setPlanQuantity(ult_account_count);
+			
+						ult_product.removeAddon(name_direct_delivery);
+						ult_product.removeAddon(name_org_units);
+						ult_product.removeAddon(name_sms);
+						ult_product.removeAddon(name_custom_branding);
+						ult_product.removeAddon(name_mail_submission);
+						ult_product.removeAddon(name_implementation);
+			
+						if (ult_addon_direct_delivery > 0){
+							ult_product.addAddon({id: name_direct_delivery, quantity: ult_account_count});
+						}
+						if (ult_addon_mail_submission > 0){
+							ult_product.addAddon({id: name_mail_submission, quantity: ult_account_count});
+						}
+						if (ult_addon_org_units > 0){
+							ult_product.addAddon({id: name_org_units, quantity: ult_account_count});
+						}
+						if (ult_addon_free_sms > 0){
+							ult_product.addAddon({id: name_sms, quantity: ult_account_count});
+						}
+						if (ult_addon_guest_branding > 0){
+							ult_product.addAddon({id: name_custom_branding, quantity: ult_account_count});
+						}
+						if (ult_addon_implementation > 0){
+							ult_product.addAddon({id: name_implementation, quantity: ult_account_count});
+						}						
+					}
+			
+					document.addEventListener("DOMContentLoaded", function() {
+			
+			
+					  var cbInstance = Chargebee.getInstance();
+					  var planElement = document.querySelector("[data-cb-plan-id='zivver-ultimate-v1']");
+					  ult_product = cbInstance.getProduct(planElement);
+			
+					  ult_update_price();
+					  ult_updateProfProduct()
+			
+					  var cart = cbInstance.getCart();
+					  //cart.setCustomer({email: "olivier.paling@zivver.com"});
+							console.log(document.getElementById("ms"));
+							console.log("loaded");
+					  cbInstance.setCheckoutCallbacks(function(cart) {
+						// You can get the plan name for which the checkout happened like below
+			
+						var product = cart.products[0];
+								console.log("products test");
+								console.log(document.getElementById("ms"));
+								if(document.getElementById("ms").checked){
+										console.log("ms checked")
+								}
+						console.log(product.planId);
+						console.log(product.addons);
+						return {
+							loaded: function() {
+								console.log("checkout opened");
+							},
+							close: function() {
+								console.log("checkout closed");
+							},
+							success: function(hostedPageId) {
+							  console.log(hostedPageId);
+							  // Hosted page id will be unique token for the checkout that happened
+							  // You can pass this hosted page id to your backend
+							  // and then call our retrieve hosted page api to get subscription details
+							  // https://apidocs.chargebee.com/docs/api/hosted_pages#retrieve_a_hosted_page
+							},
+							step: function(value) {
+								// value -> which step in checkout
+								console.log(value);
+							}
+						}
+					  });
+			
+					  
+					  document.getElementById('accounts_counter').addEventListener('input', function (event) {
+						ult_account_count = document.getElementById("accounts_counter").value
+						document.getElementById("account_show").innerHTML = ult_account_count
+						
+			
+						ult_update_price();
+					  ult_updateProfProduct()
+					  }, false);
+
+
+							document.getElementById('ult_free_sms').addEventListener('click', function (event) {
+								ult_addon_free_sms = document.getElementById("ult_free_sms").checked;
+								ult_update_price();
+					  ult_updateProfProduct()
+							}, false);
+
+							document.getElementById('ult_guest_branding').addEventListener('click', function (event) {
+								ult_addon_guest_branding = document.getElementById("ult_guest_branding").checked;
+								ult_update_price();
+					  ult_updateProfProduct()
+							}, false);
+
+							document.getElementById('ult_org_units').addEventListener('click', function (event) {
+								ult_addon_org_units = document.getElementById("ult_org_units").checked;
+								ult_update_price();
+					  ult_updateProfProduct()
+							}, false);
+
+							document.getElementById('ult_direct_delivery').addEventListener('click', function (event) {
+								ult_addon_direct_delivery = document.getElementById("ult_direct_delivery").checked;
+								ult_update_price();
+					  ult_updateProfProduct()
+							}, false);
+
+							document.getElementById('ult_mail_submission').addEventListener('click', function (event) {
+								ult_addon_mail_submission = document.getElementById("ult_mail_submission").checked;
+								ult_update_price();
+					  ult_updateProfProduct()
+							}, false);
+
+							document.getElementById('ult_implementation_support').addEventListener('click', function (event) {
+								ult_addon_implementation = document.getElementById("ult_implementation_support").checked;
+								ult_update_price();
+					  ult_updateProfProduct()
+							}, false);	
+
+							// document.getElementById('prof_domain_claim').addEventListener('click', function (event) {
+							// 	prof_addon_domain_claims = document.getElementById("prof_domain_claim").checked;
+							// 	update_price();
+							// 	updateProfProduct();
+							// }, false);
+			
+							// document.getElementById('prof_conversation_starter').addEventListener('click', function (event) {
+							// 	prof_addon_conv_starter = document.getElementById("prof_conversation_starter").checked;
+							// 	update_price();
+							// 	updateProfProduct();
+							// }, false);
+			
+							// document.getElementById('prof_guest_branding').addEventListener('click', function (event) {
+							// 	prof_addon_guest_branding = document.getElementById("prof_guest_branding").checked;
+							// 	update_price();
+							// 	updateProfProduct();
+							// }, false);
+			
+							// document.getElementById('prof_implementation_support').addEventListener('click', function (event) {
+							// 	prof_addon_implementation = document.getElementById("prof_implementation_support").checked;
+							// 	update_price();
+							// 	updateProfProduct();
+							// }, false);				
+			
+					});
+				</script>
+			
+<script>
 	    document.addEventListener("DOMContentLoaded", function() {
 	      var cbInstance = Chargebee.getInstance();
 
-	      var planElement = document.querySelector("[data-cb-plan-id='ultimate']");
+	      var planElement = document.querySelector("[data-cb-plan-id='zivver-ultimate-v1']");
 	      var product = cbInstance.getProduct(planElement);
 	      // product.addCoupon("startup");
 	      var cart = cbInstance.getCart();
